@@ -50,6 +50,8 @@ function cacheSave(id, data, done) {
   var store = path.join(currentDir, cacheLocation, hash);
   
   data.time = new Date().getTime();
+  data.headers = data.headers || {};
+  data.headers['ag-proxy-cache'] = store;
   data = JSON.stringify(data);
   
   fs.writeFile(store, data, function(err) {
