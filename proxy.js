@@ -16,9 +16,9 @@ var defaultResponse = 'This is a basic proxy server, see code at https://github.
 var currentDir = __dirname;
 
 // Process environment variables
-port = (_.isNumber(port)) ? port : 5000;
+port = (_.isNumber(parseInt(port, 10))) ? port : 5000;
 domainRegex = (_.isString(domainRegex)) ? new RegExp(domainRegex) : new RegExp('');
-cacheMinutes = (_.isNumber(cacheMinutes)) ? cacheMinutes : 20;
+cacheMinutes = (_.isNumber(parseInt(cacheMinutes, 10))) ? cacheMinutes : 20;
 cacheLocation = (_.isString(cacheLocation)) ? cacheLocation : 'cache';
 
 // Handle a request
