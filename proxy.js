@@ -10,7 +10,7 @@ var request = require('request');
 // "Global" vars
 var port = process.env.PORT || 5000;
 var domainRegex = process.env.AG_PROXY_DOMAIN_REGEX || '';
-var cacheMinutes = process.env.AG_PROXY_CACHE_TIME || 5;
+var cacheMinutes = process.env.AG_PROXY_CACHE_TIME || 20;
 var cacheLocation = process.env.AG_PROXY_CACHE_LOCATION || 'cache';
 var defaultResponse = 'This is a basic proxy server, see code at https://github.com/MinnPost/all-good-proxy';
 var currentDir = __dirname;
@@ -18,7 +18,7 @@ var currentDir = __dirname;
 // Process environment variables
 port = (_.isNumber(port)) ? port : 5000;
 domainRegex = (_.isString(domainRegex)) ? new RegExp(domainRegex) : new RegExp('');
-cacheMinutes = (_.isNumber(cacheMinutes)) ? cacheMinutes : 60;
+cacheMinutes = (_.isNumber(cacheMinutes)) ? cacheMinutes : 20;
 cacheLocation = (_.isString(cacheLocation)) ? cacheLocation : 'cache';
 
 // Handle a request
