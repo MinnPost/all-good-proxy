@@ -86,7 +86,7 @@ function cacheLoad(id, done) {
 function cacheAndDisplay(res, id, code, headers, data) {
   cacheSave(id, {
     code: code,
-    header: headers,
+    headers: headers,
     data: data
   });
   res.writeHead(code, headers);
