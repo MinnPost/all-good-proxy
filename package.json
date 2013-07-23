@@ -1,0 +1,25 @@
+{
+  "name": "all-good-proxy",
+  "version": "0.0.1",
+  "description": "A simple proxy that caches only (HTTP status) good results.",
+  "main": "proxy.js",
+  "dependencies": {
+    "underscore": "~1.5.1",
+    "request": "~2.22.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MinnPost/all-good-proxy.git"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "Alan Palazzolo",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "77ad88f246a054b68a51c19adadccd5fb3ca66a0"
+}
