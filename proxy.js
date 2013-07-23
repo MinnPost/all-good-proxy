@@ -28,7 +28,8 @@ function makeRequest(options, done, error) {
       error(reqError);
     }
     else {
-      if (res.statusCode === 200) {
+      if (_.isNumber(res.statusCode) && res.statusCode >= 200 &&
+        res.statusCode < 300) {
         done(res, data);
       }
       else {
