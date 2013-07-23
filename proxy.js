@@ -145,7 +145,6 @@ function proxy(req, res, proxyURL) {
         // old cache and update time.  Force a small-ish timeout.
         proxyOptions.timeout = 5000;
         makeRequest(proxyOptions, function(proxyRes, data) {
-          delete proxyRes.headers['content-disposition'];
           cacheAndDisplay(res, proxyURL, proxyRes.statusCode, proxyRes.headers, data);
         },
         function(proxyRes, data) {
@@ -155,7 +154,6 @@ function proxy(req, res, proxyURL) {
     }
     else {
       makeRequest(proxyOptions, function(proxyRes, data) {
-        delete proxyRes.headers['content-disposition'];
         cacheAndDisplay(res, proxyURL, proxyRes.statusCode, proxyRes.headers, data);
       }, 
       function(proxyRes, data) {
