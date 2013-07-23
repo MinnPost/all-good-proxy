@@ -52,7 +52,7 @@ function cacheSave(id, data, done) {
   data.time = new Date().getTime();
   data.headers = data.headers || {};
   data.headers['ag-proxy-cache'] = hash;
-  data.headers['ag-proxy-time'] = time;
+  data.headers['ag-proxy-time'] = data.time;
   data = JSON.stringify(data);
   
   fs.writeFile(store, data, function(err) {
