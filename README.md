@@ -2,6 +2,8 @@
 
 A simple proxy that caches only (HTTP status) good results.  This means that the cache is only invalidated if a valid proxied request returns a positive (200-ish) status, otherwise, it will continue to serve up the cache.
 
+The MinnPost use case is that we use ScraperWiki, and though the API is fairly solid most of the time, this allows us to ensure that we have a working data source even if ScraperWiki goes down for a bit.
+
 ## Install
 
 1. Install Node.
